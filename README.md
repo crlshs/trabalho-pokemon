@@ -1,7 +1,5 @@
 # Trabalho jogo Pokémon
-Matéria: Programação
-Professor Helder
-Feito por Dr. Carlos Henrique Silveira, Dr. Nicolas Hresko Mazurek e Dra. Érica Maria Borille
+Matéria: Programação - Helder
 
 # ⭐ Importante
 Para o bom funcionamento do jogo, é preciso utilizar a *versão 3.7* ou superior do python.
@@ -21,3 +19,8 @@ moviepy será necessário para que os vídeos usados durante o jogo possam ser v
 ```
 pip install moviepy
 ```
+
+# Feito por: 
+- Dr. Carlos Henrique Silveira;
+- Dr. Nicolas Hresko Mazurek;
+- Dra. Érica Maria Borille.

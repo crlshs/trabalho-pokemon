@@ -12,7 +12,7 @@ from time import sleep
 
 diretorio_atual = getcwd()
 
-wallpaper = pygame.image.load(diretorio_atual + '\imagens\Outros\\fundo batalha.png')
+wallpaper = pygame.image.load(diretorio_atual + r'\imagens\Outros\fundo batalha.png')
 
 ##############
 
@@ -61,12 +61,12 @@ def batalha():
     vez_de = f"Vez de {jogando}!"
 
     # botoes de ataque
-    basico1_p1 = BotaoAtaque("basico1_p1", diretorio_atual + '\imagens\Botoes\Basico 1.png', 0, 440, True)
-    basico2_p1 = BotaoAtaque("basico1_p1", diretorio_atual + '\imagens\Botoes\Basico 2.png', 151, 440, False)
+    basico1_p1 = BotaoAtaque("basico1_p1", diretorio_atual + r'\imagens\Botoes\Basico 1.png', 0, 440, True)
+    basico2_p1 = BotaoAtaque("basico1_p1", diretorio_atual + r'\imagens\Botoes\Basico 2.png', 151, 440, False)
     ultimate_p1 = BotaoAtaque("ultimate_p1", diretorio_atual + r'\imagens\Botoes\Ultimate.png', 0, 768-200, False)
 
-    basico1_p2 = BotaoAtaque("basico1_p2", diretorio_atual + '\imagens\Botoes\Basico 1.png', 1066, 440, True)
-    basico2_p2 = BotaoAtaque("basico2_p2", diretorio_atual + '\imagens\Botoes\Basico 2.png', 1216, 440, False)
+    basico1_p2 = BotaoAtaque("basico1_p2", diretorio_atual + r'\imagens\Botoes\Basico 1.png', 1066, 440, True)
+    basico2_p2 = BotaoAtaque("basico2_p2", diretorio_atual + r'\imagens\Botoes\Basico 2.png', 1216, 440, False)
     ultimate_p2 = BotaoAtaque("ultimate_p1", diretorio_atual + r'\imagens\Botoes\Ultimate.png', 1066, 768-200, False)
 
     # jogadas dos treinadores
@@ -80,7 +80,7 @@ def batalha():
     # funcao
     def acabou(quem_ganhou:int):
         if quem_ganhou == 2:
-            pokemon_esquerda = pygame.image.load(diretorio_atual + f'\imagens\\Pokemons\\falecido.png')
+            pokemon_esquerda = pygame.image.load(diretorio_atual + r'\imagens\Pokemons\falecido.png')
             tela.blit(pokemon_esquerda, (310,y+321))
             vez_de = f"{treinador2.get_nome()} venceu!"
             vez = fonte_titulo.render(vez_de, True, (255, 0, 0))
@@ -88,7 +88,7 @@ def batalha():
             pygame.display.update()
 
         elif quem_ganhou == 1:
-            pokemon_direita = pygame.image.load(diretorio_atual + f'\imagens\\Pokemons\\falecido.png')
+            pokemon_direita = pygame.image.load(diretorio_atual + r'\imagens\Pokemons\falecido.png')
             tela.blit(pokemon_direita, (766,y+321))
             vez_de = f"{treinador1.get_nome()} venceu!"
             vez = fonte_titulo.render(vez_de, True, (255, 0, 0))
@@ -320,16 +320,16 @@ def batalha():
         vida_treinador1 = f"Hp {pokemon_atual_t1.get_nome_pokemon()}: {pokemon_atual_t1.get_hpatual()}"
         vida_treinador2 = f"Hp {pokemon_atual_t2.get_nome_pokemon()}: {pokemon_atual_t2.get_hpatual()}"
 
-        vida_treinador1_natela = fonte.render(vida_treinador1, True, (0, 0, 0), bgcolor=(255, 255, 255))
-        vida_treinador2_natela = fonte.render(vida_treinador2, True, (0, 0, 0), bgcolor= (255, 255, 255))
+        vida_treinador1_natela = fonte.render(vida_treinador1, True, (0, 0, 0), (255, 255, 255))
+        vida_treinador2_natela = fonte.render(vida_treinador2, True, (0, 0, 0), (255, 255, 255))
         evento_natela = fonte.render(texto_evento, True, (255, 255, 255))
         vez = fonte_titulo.render(vez_de, True, (255, 0, 0))
 
-        if pokemon_atual_t2 in pokemons: pokemon_direita = pygame.image.load(diretorio_atual + f'\imagens\\Pokemons\{pokemon_atual_t2.get_nome_pokemon()} direita.png')
-        else: pokemon_direita = pygame.image.load(diretorio_atual + f'\imagens\\Pokemons\Indefinido.png')
+        if pokemon_atual_t2 in pokemons: pokemon_direita = pygame.image.load(diretorio_atual + rf'\imagens\Pokemons\{pokemon_atual_t2.get_nome_pokemon()} direita.png')
+        else: pokemon_direita = pygame.image.load(diretorio_atual + rf'\imagens\Pokemons\Indefinido.png')
 
-        if pokemon_atual_t1 in pokemons: pokemon_esquerda = pygame.image.load(diretorio_atual + f'\imagens\\Pokemons\{pokemon_atual_t1.get_nome_pokemon()} esquerda.png')
-        else: pokemon_esquerda = pygame.image.load(diretorio_atual + f'\imagens\\Pokemons\Indefinido.png')
+        if pokemon_atual_t1 in pokemons: pokemon_esquerda = pygame.image.load(diretorio_atual + rf'\imagens\Pokemons\{pokemon_atual_t1.get_nome_pokemon()} esquerda.png')
+        else: pokemon_esquerda = pygame.image.load(diretorio_atual + rf'\imagens\Pokemons\Indefinido.png')
 
         # funcao para pegar as habilidades dos pokemons atuais
         def habilidades_atuais():

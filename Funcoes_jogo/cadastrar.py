@@ -26,9 +26,9 @@ def cadastrar_pokemon():
 
     fonte_titulo = pygame.font.Font(((diretorio_atual + "\\fontes\\04B_30__.ttf")), size=28)
 
-    wallpaper_inicio = pygame.image.load(diretorio_atual + '\imagens\Outros\wallpaper inicio.jpg')
+    wallpaper_inicio = pygame.image.load(diretorio_atual + r'\imagens\Outros\wallpaper inicio.jpg')
 
-    seta = pygame.image.load(diretorio_atual + '\imagens\Outros\seta input.png')
+    seta = pygame.image.load(diretorio_atual + r'\imagens\Outros\seta input.png')
 
     retangulo_input = pygame.rect.Rect(x, y, 400, 50)
 
@@ -136,7 +136,7 @@ def cadastrar_pokemon():
                             pokemon_adicionar[3],
                             pokemon_adicionar[4],
                             nome_ataque_valor_ataque_dict,
-                            (diretorio_atual + '\imagens\Pokemons\Indefinido.png')
+                            (diretorio_atual + r'\imagens\Pokemons\Indefinido.png')
                             )
 
                     pokemons_copy.append(p_adicionado)

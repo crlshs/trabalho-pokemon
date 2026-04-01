@@ -14,8 +14,8 @@ clock = pygame.time.Clock()
 pygame.init()
 
 # imagens do jogo #
-icone = pygame.image.load(diretorio_atual + '\imagens\Outros\icon.png')
-wallpaper_inicio = pygame.image.load(diretorio_atual + '\imagens\Outros\wallpaper inicio.jpg')
+icone = pygame.image.load(diretorio_atual + r'\imagens\Outros\icon.png')
+wallpaper_inicio = pygame.image.load(diretorio_atual + r'\imagens\Outros\wallpaper inicio.jpg')
 
 
 # icone e legenda do jogo #
@@ -25,13 +25,13 @@ pygame.display.set_caption("Trabalho Pokemon - Carlos, Nicolas & Erica")
 # criando os botoes iniciais
 x = (1366 - 400) / 2
 
-listar = Botao("listar", (diretorio_atual + "\imagens\Botoes\Listar Pokemons.png"), x-250, 240)
-cadastrar = Botao("cadastrar", (diretorio_atual + "\imagens\Botoes\Cadastrar Pokemons.png"), x+250, 240)
-batalhar = Botao("batalhar", (diretorio_atual + "\imagens\Botoes\Batalhar.png"), x-250, 450)
-sair = Botao("sair", (diretorio_atual + "\imagens\Botoes\Sair.png"), x+250, 450)
+listar = Botao("listar", (diretorio_atual + r"\imagens\Botoes\Listar Pokemons.png"), x-250, 240)
+cadastrar = Botao("cadastrar", (diretorio_atual + r"\imagens\Botoes\Cadastrar Pokemons.png"), x+250, 240)
+batalhar = Botao("batalhar", (diretorio_atual + r"\imagens\Botoes\Batalhar.png"), x-250, 450)
+sair = Botao("sair", (diretorio_atual + r"\imagens\Botoes\Sair.png"), x+250, 450)
 botoes = [listar, cadastrar, batalhar, sair]
 
-logo = pygame.image.load(diretorio_atual + "\imagens\Outros\logo.png")
+logo = pygame.image.load(diretorio_atual + r"\imagens\Outros\logo.png")
 
 # rodando o vídeo antes de começar o jogo #
 video = moviepy.editor.VideoFileClip(diretorio_atual + "\\video\\abertura.mp4")

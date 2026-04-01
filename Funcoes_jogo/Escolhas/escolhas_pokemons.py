@@ -35,15 +35,15 @@ def escolha_pokemons():
     x = (1366 - 400) / 2
     y = (768 - 100) / 2
 
-    voltar = Botao("voltar", (diretorio_atual + "\imagens\\Botoes\Voltar.png"), x, 560)
+    voltar = Botao("voltar", (diretorio_atual + r"\imagens\Botoes\Voltar.png"), x, 560)
 
-    wallpaper_inicio = pygame.image.load(diretorio_atual + '\imagens\Outros\wallpaper inicio.jpg')
+    wallpaper_inicio = pygame.image.load(diretorio_atual + r'\imagens\Outros\wallpaper inicio.jpg')
 
     fonte = pygame.font.Font((diretorio_atual + "\\fontes\\7X7PixelizedRegular-35wp.ttf"), size=28)
 
     fonte_titulo = pygame.font.Font(((diretorio_atual + "\\fontes\\04B_30__.ttf")), size=28)
 
-    seta = pygame.image.load(diretorio_atual + '\imagens\Outros\seta input.png')
+    seta = pygame.image.load(diretorio_atual + r'\imagens\Outros\seta input.png')
 
     retangulo_teste = pygame.rect.Rect(x, y, 400, 50)
 

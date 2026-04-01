@@ -10,12 +10,12 @@ diretorio_atual = getcwd()
 def escolha_cadastro():
     x = (1366 - 400) / 2
 
-    voltar = Botao("voltar", (diretorio_atual + "\imagens\Botoes\Voltar.png"), x, 560)
+    voltar = Botao("voltar", (diretorio_atual + r"\imagens\Botoes\Voltar.png"), x, 560)
 
-    wallpaper_inicio = pygame.image.load(diretorio_atual + '\imagens\Outros\wallpaper inicio.jpg')
+    wallpaper_inicio = pygame.image.load(diretorio_atual + r'\imagens\Outros\wallpaper inicio.jpg')
 
-    adicionar_pokemon = Botao("adicionar pokemon", diretorio_atual + "\imagens\Botoes\Pokemon.png", x, 240)
-    adicionar_treinador = Botao("adicionar treinador", diretorio_atual + "\imagens\Botoes\Treinador.png", x, 400)
+    adicionar_pokemon = Botao("adicionar pokemon", diretorio_atual + r"\imagens\Botoes\Pokemon.png", x, 240)
+    adicionar_treinador = Botao("adicionar treinador", diretorio_atual + r"\imagens\Botoes\Treinador.png", x, 400)
 
     botoes = [voltar, adicionar_pokemon, adicionar_treinador]
 

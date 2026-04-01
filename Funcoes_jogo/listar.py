@@ -13,15 +13,15 @@ def listar_pokemons_treinadores():
 
     pygame.font.init()
 
-    wallpaper_inicio = pygame.image.load(diretorio_atual + '\imagens\Outros\wallpaper inicio.jpg')
+    wallpaper_inicio = pygame.image.load(diretorio_atual + r'\imagens\Outros\wallpaper inicio.jpg')
 
     fonte = pygame.font.Font((diretorio_atual + "\\fontes\\7X7PixelizedRegular-35wp.ttf"), size=14)
 
     fonte_titulo = pygame.font.Font((diretorio_atual + "\\fontes\\04B_30__.ttf"), size=48)
 
-    fundo_lista_pokemons = pygame.image.load(diretorio_atual + "\imagens\Outros\Fundo lista pokemons.png")
+    fundo_lista_pokemons = pygame.image.load(diretorio_atual + r"\imagens\Outros\Fundo lista pokemons.png")
 
-    fundo_lista_treinadores = pygame.image.load(diretorio_atual + "\imagens\Outros\Fundo lista treinadores.png")
+    fundo_lista_treinadores = pygame.image.load(diretorio_atual + r"\imagens\Outros\Fundo lista treinadores.png")
 
     pokemons_1 = [fonte.render(linha, True, (255, 255, 255)) for linha in texto_informacoes_pokemons(1, pokemons_copy).split("\n")]
 
@@ -31,13 +31,13 @@ def listar_pokemons_treinadores():
     
     texto_treinadores = [fonte.render(linha, True, (255, 255, 255)) for linha in texto_informacoes_treinadores(treinadores_copy).split("\n")]
 
-    texto_titulo_pokemon = fonte_titulo.render("Pokemons", True, color=(0, 0, 0))
-    texto_titulo_treinadores = fonte_titulo.render("Treinadores", True, color=(0, 0, 0))
+    texto_titulo_pokemon = fonte_titulo.render("Pokemons", True, (0, 0, 0))
+    texto_titulo_treinadores = fonte_titulo.render("Treinadores", True, (0, 0, 0))
 
-    legenda_pokemons = [fonte.render(linha, True, color=(255,255,255)) for linha in texto_legenda_pokemon.split("\n")]
-    legenda_treinadores = [fonte.render(linha, True, color=(255, 255, 255)) for linha in texto_legenda_treinador.split("\n")]
+    legenda_pokemons = [fonte.render(linha, True, (255,255,255)) for linha in texto_legenda_pokemon.split("\n")]
+    legenda_treinadores = [fonte.render(linha, True, (255, 255, 255)) for linha in texto_legenda_treinador.split("\n")]
 
-    voltar = Botao("voltar", (diretorio_atual + "\imagens\Botoes\Voltar.png"), ((1366 - 400) / 2), 560)
+    voltar = Botao("voltar", (diretorio_atual + r"\imagens\Botoes\Voltar.png"), ((1366 - 400) / 2), 560)
 
     rodando = True
 
